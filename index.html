@@ -35,68 +35,186 @@
 					</p>
 				</section>
 				<section>
-					<h2>Subjects</h2>
-					<ul>
-						<li>
+					<section>
+						<h2>History</h2>
+					</section>
+					<section>
+						<h2>Letter substitution</h2>
+						<ul>
+							<li>ROT-Thirteen</li>
+							<li>Ceasar Cypher</li>
+							<li>Enigma Machine</li>
 						</ul>
+<aside class="notes" data-markdown>
+							<script type="text/template">
+								* Substitution cyphers are insecure, eg by using language analysis.
+								* Not used anymore. Always talking about huge numbers, or arrays of bytes
+							</script>
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Confidentiality</h2>
+						<img src="img/classified.jpg" style="max-width:40%"/>
+						<aside class="notes"  data-markdown>
+							<script type="text/template">
+							* A third party cannot gain any information from a secret message.
+							* Third party cannot even detect the difference between an encoded message and random data
+							* Except for the length of the message
+							</script>
+						</aside>
 					</section>
 					<section>
-						<section>
-							<h2>Confidentiality</h2>
-							<p>A third party cannot gain any information from a secret message</p>
-							<p>Except for the length</p>
-						</section>
-						<section>
-							<h2>Integrity</h2>
-							<p>A message was not altered in transit</p>
-						</section>
-						<section>
-							<h2>Non repudiation</h2>
-							<p>A party cannot deny having agreed to an earlier action</p>
-						</section>
+						<h2>Integrity</h2>
+						<img src="img/wax_seal.jpg" style="max-width:75%"/>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							* A message was not altered in transit
+							* Without integrity there cannot be Confidentiality.
+							</script>
+						</aside>
 					</section>
 					<section>
-						<h2>Introducing</h2>
-						<p>Alice</p>
-						<p>Bob</p>
-						<p>Eve</p>
+						<h2>Availability</h2>
+						<img src="img/open.jpg"/>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							* Information must be available
+							* Often used because it is a cool abbreviation
+							</script>
+						</aside>
 					</section>
 					<section>
-						<section>
-							<h2>Symmetric</h2>
-							<p>
-								One key, used for encryption as well as decription
-							</p>
-							<p>
-								Does not solve the problem. Only makes it smaller
-							</p>
-							<p>Block cyphers and stream cyphers</p>
+						<h2>Non repudiation</h2>
+						<img src="img/Alan_Turing_signature.svg"  style="background-color:white"/>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							* Onweerlegbaarheid
+							* A party cannot deny having agreed to an earlier action
+							* Useful for contracts
+							</script>
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Symmetric &amp; Asymmetric</h2>
+						<img src="img/taj_mahal.JPG" style="float:left;max-width:40%" /> <img src="img/Auditorio_de_Tenerife_Pano.jpg" style="float:right;max-width:47%"/>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							* Two kinds of encryption
+							</script>
+						</aside>
+					</section>
+					<section>
+						<h2>Symmetric</h2>
+						
+						<img src="img/safe.jpeg" style="max-width:65%" />
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							* One key, used for encryption and decryption
+							* Fast
+							* Does not solve your problem. Still have to transfer the key
+							</script>
+						</aside>
+					</section>
+					<section>
+						<h2>Asymmetric</h2>
+						<img src="img/padlock.jpeg" style="max-width:65%" />
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+								* Two keys.
+								* public key, used for encryption and verifycation of a signature
+								* private key, used for encryption and signing
+								* Slower, complicated math
+								* Keysize cannot be compared: 512 asymm is not safer than 256 symm
+							</script>
+						</aside>
+					</section>
+					<section>
+						<h2>Practice</h2>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+								* Use symmetric for encrypting the message
+								* Use asymmetric for encrypting the key
+								* Keysize cannot be compared: 512 ASync is not safer than 256 Sync
+							</script>
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Symmetric algorithms</h2>
+						<img src="img/symmetric_cryptography.svg" style="max-width:50%"/>
+					</section>
+					<section>
+						<h2>Block ciphers and stream ciphers</h2>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+								* Stream ciphers are perfectly secure
+								* Need a key as long as the message
+								* Cannot use the key twice
+								* Block cipher encrypt blocks of certain size
+								
+							</script>
+						</aside>
+					</section>
+					<section>
+						<h3> AES</h3>
+						Advanced Encryption Standard<br/>
+						<img src="img/manneken_pis.jpg" style="max-width:65%" />
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							* Invented in Belgium (Rijndael)
+							* Contest by the NIST (National Institute of Standards and Technology)
+							* Block size: 16 byte<br/>
+							* Key size: 128, 192 or 256 bits<br/>
+							</script>
+						</aside>
+					</section>
+					<section>
+						<h3>DES and Triple-DES</h3>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							* DES is broken
+							* Triple-DES is not broken, but slower than AES
+							</script>
+						</aside>
+						
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Asymmetric algorithms</h2>
+						<img src="img/trapdoor.jpg" style="max-width:75%"/>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							* Trapdoor function
+							* Fast one way, slow the other way
+							</script>
+						</aside>
+					</section>
+					<section >
+						
+						<h3> RSA</h3>
+						Invented by Ron <strong>R</strong>ivest, Adi <strong>S</strong>hamir and Leonard <strong>A</strong>dleman
+						<img src="img/rsa-photo.jpg"/>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							* Invented at MIT
+							* Equivalent system already invented by Clifford Cocks, but not declassified until 1997
+							</script>
+						</aside>
+					</section>
+					<section>
+						<h3> RSA</h3>
+						<p>Easy:</p>
+						$$p \times q \rightarrow pq$$<br/>
+						<p>Difficult:<p/>
+							$$p q \rightarrow p \times q$$
 						</section>
 						
-						<section>
-							<h3>AES</h3>
-							<p>Advanced Encryption Standard</p>
-							<p>Belgium (Rijndael)</p>
-							<p>Block size: 128 bit</p>
-							<p>Key size: 128, 192 or 256 bits</p>
-						</section>
-						<section>
-							<h3>DES and Triple-DES</h3>
-							<p>DES is broken</p>
-							<p>Triple-DES is not broken, but slower than AES</p>
-						</section>
-					</section>
-					<section>
-						<section>
-							<h2>Asymmetric</h2>
-							<p>
-								Two keys. A public key, used for encryption and verifycation of a signature, and a private key, used for encryption and signing
-							</p>
-						</section>
-						<section>
-							<h3>RSA</h3>
-							<p>Invented by Ron <span style="text-decoration:underline">R</span>ivest, Adi <b>S</b>hamir and Leonard <b>A</b>dleman.</p>
-						</section>
 						<section>
 							<h3>Others</h3>
 							<ul>
@@ -104,53 +222,125 @@
 								<li>ElGamal</li>
 								<li>Elliptic Curve</li>
 							</ul>
+						
+												<aside class="notes" data-markdown>
+							<script type="text/template">
+							* DH - Key Exchange
+							* ELGamal - Key Exchange
+							* Elliptic Curve - Family of algorithms, Small keys
+							</script>
+							</section>
+					</section>
+				</section>
+				<section>
+					
+					<section>
+						<h2>Hashing</h2>
+						<img src="img/fingerprint.jpg" style="max-width:75%"/>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+								* One way function
+								* Deterministic
+								
+							</script>
+						</aside>
+					</section>
+					<section>
+						<h3>Collisions</h3>
+						<img src="img/collision.jpg"/><br>
+						$$ xebia \rightarrow aad3fcfa3352b57afd6aee013ccd69cb $$
+						$$ Xebia \rightarrow 13f6a4bf6b2198a589dae92526c4b93a $$
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							* Collission: Different files give the same hash
+							* Even very similar files should give totally different hashes
+							</script>
+						</aside>
+					</section>
+					<section>
+						<h3>Demo</h3>
+						<img src="img/barry.jpg.coll" style="max-width:50%"/>
+						<img src="img/james.jpg.coll" style="max-width:26%"/>
+						<br>
+						<small>md5 = e06723d4961a0a3f950e7786f3766338</small>
+						<br>
+						From <a href="http://natmchugh.blogspot.nl">http://natmchugh.blogspot.nl/2014/10/how-i-created-two-images-with-same-md5.html</a>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							* Two different images
+							* Identical md5 hash
+							* Different SHA-256 hash
+							</script>
+						</aside>
+					</section>
+					<section>
+						<h3>Files</h3>
+						<img src="img/Cheetah_chase.jpg"/>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+								* Need to be fast
+								* Files are not secret
+							</script>
+						</aside>
+					</section>
+					<section><h3>Passwords</h3>
+						<img src="img/Common_snail.jpg" style="max-width: 75%;"/>
+						<aside class="notes" data-markdown>
+							<script type="text/template">
+							
+							* Need to be slow
+							* Many iterations
+							* Use a salt
+							</script>
+						</aside>
+					</section>
+					<section>
+						<ul>
+							<li>Files</li>
+							<ul>
+								<li><s>MD5</s></li>
+								<li><s>SHA-1</s></li>
+								<li>SHA-256</li>
+							</ul>
+							<li>Passwords</li>
+							<ul>
+								<li>BCRYPT</li>
+								<li>PBKDF2</li>
+								<ul style="list-style-type: none;"><li> Password-Based Key Derivation Function 2</li></ul>
+							</ul>
+							<aside class="notes" data-markdown>
+								<script type="text/template">
+								* Designed to be difficult
+								* Many iterations
+								* Inefficient in memory usage to prevent using GPU
+								* PBKDF2 Also usable to generate encryption key from passwords
+								</script>
+							</aside>
 						</section>
 					</section>
 					<section>
-						<h2>Hashing</h2>
 						<section>
-							<p>Fingerprint</p>
-							<p>One way function</p>
-						</section>
-						<section>
-							<p>Collisions</p>
-							<p>Demo with md5 collisions</p>
-						</section>
-						<section>
-							<h3>Files</h3>
-							<p>Fast</p>
-						</section>
-						<section><h3>Passwords</h3>
-							<p>Slow</p>
-							<p>Use salt</p>
-						</section>
-						<section>
-							<ul>
-								<li>Files</li>
-								<ul>
-									<li><s>MD5</s></li>
-									<li><s>SHA-1</s></li>
-									<li>SHA-256</li>
-								</ul>
-								<li>Passwords</li>
-								<ul>
-									<li>BCRYPT</li>
-									<li>PBKDF2</li>
-								</ul>
-							</section>
-						</section>
-						<section>
-							<section>
-								<h2>Salt</h2>
+							<h2>Salt</h2>
+							<img src="img/salt.jpg" style="max-width:75%" />
+							<aside class="notes" data-markdown>
+								<script type="text/template">
+								
 								<p>People choose stupid passwords</p>
-								<p>Same password => Same hash</p><p>
-							Lists with hashes of common passwords exists</p>
+								<p>Same password => Same hash</p>
+								<p>Lists with hashes of common passwords exists</p>
+								</script>
+							</aside>
 						</section>
 						<section>
 							<h3>Solution: Make each password unique</h3>
-							<p>Generate a random string for each user, the salt</p>
-							<p>Add it to the password</p>
-							<p>hash("secret" + "o4wj") != hash("secret" + "re9g")</p>
+							$$hash(secret + o4wj) \neq hash(secret + re9g)$$
+							<aside class="notes" data-markdown>
+								<script type="text/template">
+								
+								* Make passwords unique
+								* Store salt in plain text
+								</script>
+							</aside>
 						</section>
 						<section>
 							For encryption: Nonce
@@ -158,49 +348,125 @@
 					</section>
 					<section>
 						<section>
-							<h2>Implementation</h2>
-							<p>Implementing cryptograpy protocols is <span style="text-decoration:underline">DIFFICULT</span></p>
-							<p>Padding attack</p>
-							<p>Side channel attack</p>
-							<p>Timing attack</p>
+							<h3>Random number generators</h3>
+							<img src="img/dice.jpg" style="max-width:75%" />
+							<aside class="notes" data-markdown>
+								<script type="text/template">
+								* Random generators do not exist in normal computers. 
+								* Pseudo random number generators
+								* Seed
+								</script>
+							</aside>
 						</section>
 						<section>
-							<h3>Random generators</h3>
-							<p>Secure</p><p>Unsecure</p>
-						</section>
-						<section><p>Random generators do not exist in normal computers. Pseudo random generators</p><p></p></section>
-					</section>
-					
-					<section>
-						<section >
-							<h2>Never implement your own encryption</h2>
+							<h3>Secure</h3>
+							<p>Unpredictable</p>
+							<p>Based on external signals (network, mouse, keyboard)</p>
 							
 						</section>
+						<section>
+							<h3>Unsecure / Unblocking</h3>
+							<p>Fast</p>
+							<p>Based on predictable seed, such as timestamp (in Java)</p>
+										<aside class="notes" data-markdown>
+								<script type="text/template">
+								* On linux:
+								* /dev/random
+								* /dev/urandom
+								* During research yesterday, found out that urandom is good enough
+								</script>
+							</aside>
+						</section>
 					</section>
-			
-				</div>
+					<section>
+						<section>
+							<h2>Implementation</h2>
+							<p>Implementing cryptograpy protocols is <span style="text-decoration:underline">DIFFICULT</span></p>
+							<aside class="notes" data-markdown>
+								<script type="text/template">
+								* Padding attack
+								* Side channel attack
+								* Timing attack
+								</script>
+							</aside>
+						</section>
+					</section>
+				</section>
+				<section>
+					<h2>Transport Layer Security &amp; Secure Socket Layer</h2>
+					<aside class="notes" data-markdown>
+						<script type="text/template">
+						* Complete cryptosystem.
+						* I left out a lot of details.
+						* Which symmetric system?
+						* Which asymmetric system?
+						* Key expansion, nonce
+						* Backwards compatibility
+						* How do you know the keys belongs to the other party
+						</script>
+					</aside>
+				</section>
+				<section>
+					<section>
+					<h3>Never implement your own encryption</h3>
+						<hr>	
+						<h3>Use BCrypt</h3>
+						<hr>
+						<h3>Use SHA-256</h3>
+						<hr>
+						<h3>Use SecureRandom</h3>
+					</ul>
+					</section>
+				</section>
+				<section>
+					https://www.coursera.org/course/crypto
+					<br>
+					Started 31 July
+					<br>
+					Six weeks
+				</section>
+				<section>
+					<h3>Used images:</h3>
+					<ul>
+						<li><small>"Australian Made CMI H2D Home Safe" by Binarysequence<br/>
+							Own work. Licensed under CC BY-SA 4.0 via Wikimedia Commons<br/>
+							https://commons.wikimedia.org/wiki/File:Australian_Made_CMI_H2D_Home_Safe.JPG<br/>
+							</small>
+						</li>
+						<li><small>"Padlock klódka ubt".<br/>Licensed under CC BY-SA 3.0 via Wikimedia Commons<br>https://commons.wikimedia.org/wiki/File:Padlock_kl%C3%B3dka_ubt.JPG</small></li>
+						<li><small>By Hein waschefort (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons</small></li>
+						<li><small>By Diacritica (Own work)<br/>[CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons</small></li>
+						<li><small>By Dubravko Sorić SoraZG on Flickr <br/>[CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons</small></li>
+						<li><small>By Frettie (Own work) <br/>[GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons</small></li>
+						<li><small>By Bananenfalter (Own work) [CC0], via Wikimedia Commons</small></li>
+						<li><small>By Alan Turing Created in vector format by Scewing (RR Auctions) [Public domain], via Wikimedia Commons</small></li>
+					</ul>
+				</section>
 			</div>
-			<script src="lib/js/head.min.js"></script>
-			<script src="js/reveal.js"></script>
-			<script>
-				// Full list of configuration options available at:
-				// https://github.com/hakimel/reveal.js#configuration
-				Reveal.initialize({
-					controls: true,
-					progress: true,
-					history: true,
-					center: true,
-					transition: 'slide', // none/fade/slide/convex/concave/zoom
-					// Optional reveal.js plugins
-					dependencies: [
-						{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-						{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-						{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-						{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-						{ src: 'plugin/zoom-js/zoom.js', async: true },
-						{ src: 'plugin/notes/notes.js', async: true }
-					]
-				});
-			</script>
-		</body>
-	</html>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					// MathJax
+			{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
